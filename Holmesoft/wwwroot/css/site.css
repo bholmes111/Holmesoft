@@ -1,0 +1,168 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.card-content {
+    max-width: 900px;
+}
+
+/*Profile Card 1*/
+.profile-card-1 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    float: none;
+    overflow: hidden;
+    /*width: 100%;*/
+    /*min-width: 200px;*/
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    height: 368px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+    .profile-card-1 .background {
+        width: 150%;
+        vertical-align: top;
+        opacity: 0.3;
+        /*-webkit-filter: blur(5px);*/
+        /*filter: blur(5px);*/
+        -webkit-transform: scale(0.8);
+        transform: scale(1.8);
+    }
+
+    .profile-card-1 .card-content {
+        width: 100%;
+        padding: 15px 25px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+
+    .profile-card-1 .profile {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        max-width: 130px;
+        opacity: 1;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+        /*border: 2px solid rgba(255, 255, 255, 1);*/
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+    }
+
+    .profile-card-1 h2 {
+        margin: 0 0 5px;
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+        .profile-card-1 h2 small {
+            display: block;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+    .profile-card-1 i {
+        display: inline-block;
+        font-size: 16px;
+        color: #FAFAFA;
+        text-align: center;
+        border: 1px solid #FAFAFA;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    .profile-card-1 .icon-block {
+        float: left;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+        .profile-card-1 .icon-block a {
+            text-decoration: none;
+        }
+
+    .profile-card-1 i:hover {
+        background-color: #FAFAFA;
+        color: #07689F;
+        text-decoration: none;
+    }
