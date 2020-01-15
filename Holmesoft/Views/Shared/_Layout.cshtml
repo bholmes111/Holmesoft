@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Holmesoft</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -15,20 +15,30 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
-                <ul class="navbar-nav w-100 justify-content-center">
+                <ul class="nav navbar-nav ml-auto justify-content-end">
                     <li class="nav-item active">
-                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <ul class="nav navbar-nav justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Personal" asp-action="Index"><i class="far fa-address-card"></i> About</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Personal" asp-action="Resume"><i class="far fa-file"></i> Resume</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Personal" asp-action="Contact"><i class="far fa-address-book"></i> Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

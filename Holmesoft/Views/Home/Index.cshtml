@@ -1,83 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Benjamin Holmes";
 }
-    <div class="row d-flex justify-content-center">
+    <div class="row justify-content-center">
         <div class="card-content mx-auto w-75">
             <div class="card-columns">
                 <div class="card profile-card-1 bg-primary">
-                    <img class="background" src="~/images/roberto-catarinicchia-6R8NHs5A27E-unsplash.jpg" alt="">
+                    <img class="background" src="~/images/roberto-catarinicchia-6R8NHs5A27E-unsplash_profile.jpg" alt="">
                     <img src="~/images/me.png" alt="profile-image" class="profile" />
+                    <a class="stretched-link" asp-area="" asp-controller="Personal" asp-action="Index"></a>
                     <div class="card-content">
                         <h2>
-                            Benjamin Holmes<small>Solutions Engineering Manager</small>
+                            Benjamin Holmes<small>Solutions Engineering Manager<br />Lead Developer</small>
                         </h2>
                         <div class="icon-block">
-                            <a href="https://www.linkedin.com/in/bholmes111/"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.facebook.com/bholmes111"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://github.com/bholmes111"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/bholmes111/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/bholmes111" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src=".../100px160/" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title that wraps to a new line</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="card p-3">
-                    <blockquote class="blockquote mb-0 card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">
-                            <small class="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
+                    <a class="stretched-link" asp-area="" asp-controller="Personal" asp-action="Resume"></a>
+                    <img class="card-img" src="~/images/resume_sm.jpg" alt="Resume">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src=".../100px160/" alt="Card image cap">
+                    <h5 class="card-header text-center">Contact Me</h5>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                        <footer class="blockquote-footer">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img" src=".../100px260/" alt="Card image">
-                </div>
-                <div class="card p-3 text-right">
-                    <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">
-                            <small class="text-muted">
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a class="stretched-link" asp-area="" asp-controller="Personal" asp-action="Contact"></a>
+
+                        <p class="card-text">Would you like to get in touch? Use this convenient form to send me an email.</p>
                     </div>
                 </div>
             </div>

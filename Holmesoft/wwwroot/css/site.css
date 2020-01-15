@@ -77,6 +77,26 @@ body {
     max-width: 900px;
 }
 
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-left {
+    background: linear-gradient( rgba(7, 104, 159, 0.4), rgba(7, 104, 159, 0.4) ),url("../../images/roberto-catarinicchia-6R8NHs5A27E-unsplash.jpg");
+}
+
+.card {
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+    .card:hover {
+        -webkit-transform: translateX(-2px) translateY(2px);
+        transform: translateX(-2px) translateY(2px);
+    }
+
 /*Profile Card 1*/
 .profile-card-1 {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -93,16 +113,18 @@ body {
     height: 368px;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
+    .profile-card-1:hover {
+        -webkit-transform: translateX(-2px) translateY(2px);
+        transform: translateX(-2px) translateY(2px);
+    }
+
     .profile-card-1 .background {
-        width: 150%;
         vertical-align: top;
-        opacity: 0.3;
-        /*-webkit-filter: blur(5px);*/
-        /*filter: blur(5px);*/
-        -webkit-transform: scale(0.8);
-        transform: scale(1.8);
+        opacity: 0.2;
     }
 
     .profile-card-1 .card-content {
@@ -110,13 +132,13 @@ body {
         padding: 15px 25px;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 47%;
     }
 
     .profile-card-1 .profile {
         border-radius: 50%;
         position: absolute;
-        bottom: 50%;
+        bottom: 53%;
         left: 50%;
         max-width: 130px;
         opacity: 1;
@@ -155,6 +177,8 @@ body {
         float: left;
         width: 100%;
         margin-top: 15px;
+        z-index: 2;
+        position: relative;
     }
 
         .profile-card-1 .icon-block a {
