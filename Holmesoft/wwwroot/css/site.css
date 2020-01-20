@@ -97,6 +97,11 @@ body {
         transform: translateX(-2px) translateY(2px);
     }
 
+    .card .background {
+        vertical-align: top;
+        opacity: 0.4;
+    }
+
 /*Profile Card 1*/
 .profile-card-1 {
     font-family: 'Open Sans', Arial, sans-serif;
