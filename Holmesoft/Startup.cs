@@ -46,6 +46,13 @@ namespace Holmesoft
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            // CORS
+            // https://docs.asp.net/en/latest/security/cors.html
+            app.UseCors(builder =>
+                    builder.WithOrigins("http://www.holmesoft.com", "https://nwp70p9mfe.execute-api.us-east-1.amazonaws.com")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+
             app.UseRouting();
 
             app.UseAuthorization();

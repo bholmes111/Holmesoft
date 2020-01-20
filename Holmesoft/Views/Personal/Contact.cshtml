@@ -1,7 +1,114 @@
-﻿
+﻿@model Holmesoft.Models.ContactModel
 @{
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contact</h1>
+@section scripts {
+    @*<script src="https://www.google.com/recaptcha/api.js?render=6LfsGNAUAAAAANhyEUQhvn13tM4ikqFDVPZ2QrYN"></script>
+        <script>
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6LfsGNAUAAAAANhyEUQhvn13tM4ikqFDVPZ2QrYN', { action: 'validate_captcha' }).then(function (token) {
+                    document.getElementById("g-recaptcha-response").value = token;
+                });
+            });
+        </script>*@
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function submitToAPI(e) {
+            e.preventDefault();
 
+            var contactForm = $("#contact-form");
+
+            $.validator.unobtrusive.parse(contactForm);
+            contactForm.validate();
+
+            if (contactForm.valid()) {
+
+                var name = $("#name-input").val();
+                var email = $("#email-input").val();
+                var desc = $("#description-input").val();
+                var data = {
+                    name: name,
+                    email: email,
+                    desc: desc
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://nwp70p9mfe.execute-api.us-east-1.amazonaws.com/prod/contact-me",
+                    //dataType: "json",
+                    //crossDomain: "true",
+                    contentType: "application/json",
+                    data: JSON.stringify(data),
+                    success: function (res) {
+                        // clear form and show a success message
+                        document.getElementById("contact-form").reset();
+                        $("#postMessage").html("- Success").fadeIn('slow')
+                        $("#postMessage").delay(5000).fadeOut('slow');
+                    },
+                    error: function () {
+                        // show an error message
+                        $("#postMessage").html("- Error").fadeIn('slow')
+                        $("#postMessage").delay(5000).fadeOut('slow');
+                    }
+                });
+            }
+            else {
+                $.each(contactForm.validate().errorList, function (key, value) {
+                    $errorSpan = $("span[data-valmsg-for='" + value.element.id + "']");
+                    $errorSpan.html("<span style='color:red'>" + value.message + "</span>");
+                    $errorSpan.show();
+                });
+            }
+        }
+
+        function ccb(response) {
+            document.getElementById("contactSubmit").disabled = false;
+        }
+    </script>
+}
+
+<div class="container-fluid border rounded mx-auto w-50 justify-content-center bg-white mt-2 p-0" style="min-width: 325px; max-width:600px">
+    <div class="card-header bg-primary text-light m-0 pl-1 py-3 row">
+        <div class="col-12">
+            <div class="h5 text-left m-0 contact-title"><i class="far fa-address-book"></i>&nbsp; Contact Me <span id="postMessage"></span></div>     
+        </div>
+    </div>
+
+    <div class="card-body row my-1 px-3">
+        <div class="col-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <form id="contact-form" method="post">
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                <input type="hidden" name="action" value="validate_captcha">
+
+                <div class="row my-1">
+                    <div class="col">
+                        <input type="text" asp-for="Name" id="name-input" placeholder="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row my-1">
+                    <div class="col">
+                        <input type="text" asp-for="Email" id="email-input" placeholder="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row my-1">
+                    <div class="col">
+                        <textarea asp-for="Message" id="description-input" placeholder="Message" class="form-control"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row my-1" style="height:55px;">
+                    <div class="col-5">
+                        <div class="g-recaptcha" style="transform:scale(0.705);transform-origin:0 0;" data-sitekey="6LfsGNAUAAAAANhyEUQhvn13tM4ikqFDVPZ2QrYN" data-callback="ccb"></div><br>
+                    </div>
+                    <div class="col-7">
+                        <button id="contactSubmit" name="submit" type="submit" disabled onClick="submitToAPI(event)" class="btn btn-primary float-right">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
