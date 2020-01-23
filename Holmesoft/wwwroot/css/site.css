@@ -62,7 +62,11 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-image: url("../../images/klemen-vrankar-F_7Z1A6Jp_s-unsplash.jpg");*/
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .footer {
@@ -70,22 +74,44 @@ body {
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
+    line-height: 35px; /* Vertically center the text there */
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.text-title {
+    color: #E9E8E8;
+}
+
+.bg-about {
+    background-color: #F1F6F6;
+}
+
+.img-about {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+.text-about {
+    color: #292C31;
 }
 
 .card-content {
     max-width: 900px;
 }
 
-.bg {
+/*.bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
 .bg-left {
-    background: linear-gradient( rgba(7, 104, 159, 0.4), rgba(7, 104, 159, 0.4) ),url("../../images/roberto-catarinicchia-6R8NHs5A27E-unsplash.jpg");
-}
+    background: linear-gradient( rgba(7, 104, 159, 0.4), rgba(7, 104, 159, 0.4) );
+}*/
 
 .card {
     transition: 0.4s ease-out;
