@@ -89,6 +89,14 @@ body {
     min-height: 85vh;
 }
 
+.hyphen-wrap-off {
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    word-break: keep-all;
+}
+
 .grecaptcha-badge {
     display: none;
 }
