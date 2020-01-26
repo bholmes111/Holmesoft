@@ -89,6 +89,10 @@ body {
     min-height: 85vh;
 }
 
+.grecaptcha-badge {
+    display: none;
+}
+
 .bg-about {
     background-color: #F1F6F6;
 }
@@ -163,17 +167,24 @@ body {
     margin-top: 1.2rem;
 }
 
+.card-header {
+    margin-top: .65rem;
+    background-color: transparent;
+    border-bottom: none;
+    height: 23%
+}
+
 /*Profile Card 1*/
 .profile-card-1 {
     font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
-    float: none;
+    /*float: none;*/
     overflow: hidden;
-    /*width: 100%;*/
+    width: 100%;
     min-width: 200px;
     max-width: 360px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
     display: flex;
     flex-direction: column;
     color: #ffffff;
