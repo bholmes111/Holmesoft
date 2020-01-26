@@ -63,10 +63,6 @@ html {
 body {
     /* Margin bottom by footer height */
     /*margin-bottom: 60px;*/
-    /*background-repeat: no-repeat;*/
-    /*background-image: url("../../images/klemen-vrankar-F_7Z1A6Jp_s-unsplash.jpg");*/
-    background-size: cover;
-    background-position: 50% 50%;
 }
 
 .footer {
@@ -81,52 +77,91 @@ body {
     font-weight: 500;
 }
 
-.text-title {
+.text-about {
+    color: #292C31;
+}
+
+.text-gray {
     color: #E9E8E8;
+}
+
+.vh-85 {
+    min-height: 85vh;
 }
 
 .bg-about {
     background-color: #F1F6F6;
 }
 
-.img-about {
+.about hr {
+    color: #E9E8E8;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.about img {
     width: 100%;
     max-width: 250px;
     border-radius: 50%;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
-.text-about {
-    color: #292C31;
+
+.about i {
+    display: inline-block;
+    font-size: 24px;
+    color: #E9E8E8;
+    text-align: center;
+    border: 1px solid #E9E8E8;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 6px;
 }
+
+    .about i:hover {
+        background-color: #E9E8E8;
+        color: #07689F;
+        text-decoration: none;
+    }
+
+.about .icon-block {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+    .about .icon-block a {
+        text-decoration: none;
+    }
 
 .card-content {
     max-width: 900px;
 }
 
-/*.bg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.bg-left {
-    background: linear-gradient( rgba(7, 104, 159, 0.4), rgba(7, 104, 159, 0.4) );
-}*/
-
 .card {
     transition: 0.4s ease-out;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    max-width: 360px;
 }
 
     .card:hover {
-        -webkit-transform: translateX(-2px) translateY(2px);
-        transform: translateX(-2px) translateY(2px);
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
     }
 
     .card .background {
         vertical-align: top;
         opacity: 0.4;
     }
+
+.card-columns .card {
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
 
 /*Profile Card 1*/
 .profile-card-1 {
@@ -135,22 +170,24 @@ body {
     float: none;
     overflow: hidden;
     /*width: 100%;*/
-    /*min-width: 200px;*/
+    min-width: 200px;
     max-width: 360px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     color: #ffffff;
     text-align: center;
     height: 368px;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    /*border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;*/
     transition: 0.4s ease-out;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
     .profile-card-1:hover {
-        -webkit-transform: translateX(-2px) translateY(2px);
-        transform: translateX(-2px) translateY(2px);
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
     }
 
     .profile-card-1 .background {
@@ -196,13 +233,19 @@ body {
         font-size: 16px;
         color: #FAFAFA;
         text-align: center;
-        border: 1px solid #FAFAFA;
+        border: 1px solid #E9E8E8;
         width: 30px;
         height: 30px;
         line-height: 30px;
         border-radius: 50%;
         margin: 0 5px;
     }
+
+        .profile-card-1 i:hover {
+            background-color: #E9E8E8;
+            color: #07689F;
+            text-decoration: none;
+        }
 
     .profile-card-1 .icon-block {
         float: left;
@@ -215,9 +258,3 @@ body {
         .profile-card-1 .icon-block a {
             text-decoration: none;
         }
-
-    .profile-card-1 i:hover {
-        background-color: #FAFAFA;
-        color: #07689F;
-        text-decoration: none;
-    }

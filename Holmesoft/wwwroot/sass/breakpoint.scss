@@ -1,0 +1,53 @@
+﻿@import "../lib/bootstrap/scss/bootstrap";
+
+/**
+ * Creates a "breakpoint" based class, for example:
+ *    $create-breakpoint-class('w', '100')
+ *      --> .w-100, .w-sm-100, .w-md-100, ...
+ *    Where the class' content is applicable to that screen size.
+ */
+@mixin create-breakpoint-class ($class-name-prefix, $class-name-suffix) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .#{$class-name-prefix}#{$infix}-#{$class-name-suffix} {
+            @include media-breakpoint-up ($breakpoint) {
+                @content;
+            }
+        }
+    }
+}
+
+@include create-breakpoint-class('w', '100') {
+    width: 100% !important;
+}
+
+@include create-breakpoint-class('w', '90') {
+    width: 90% !important;
+}
+
+@include create-breakpoint-class('w', '75') {
+    width: 75% !important;
+}
+
+.card-columns {
+    @include media-breakpoint-only(xl) {
+        column-count: 3;
+        column-gap: 1.5rem;
+    }
+
+    @include media-breakpoint-only(lg) {
+        column-count: 3;
+        column-gap: 1.5rem;
+    }
+
+    @include media-breakpoint-only(md) {
+        column-count: 2;
+        column-gap: 2.5rem;
+    }
+
+    @include media-breakpoint-only(sm) {
+        column-count: 2;
+        column-gap: 2.5rem;
+    }
+}
