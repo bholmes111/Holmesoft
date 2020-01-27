@@ -1,4 +1,5 @@
-﻿
+﻿$('#postMessage').hide();
+
 var onContactUsSubmit = function () {
 	$(document).ready(function () {
 		// Contact Form AJAX Submission
@@ -8,6 +9,7 @@ var onContactUsSubmit = function () {
 
 		// Get the messages span.
 		var formMessages = $('#postMessage');
+		formMessages.hide();
 
 		$.validator.unobtrusive.parse(form);
 		form.validate();
@@ -47,7 +49,8 @@ var onContactUsSubmit = function () {
 					console.log(data);
 					// clear form and show a success message
 					document.getElementById("contact-form").reset();
-					$(formMessages).html("- " + data.message).fadeIn('slow')
+					$(formMessages).show();
+					$(formMessages).html(data.message).fadeIn('slow');
 					$(formMessages).delay(5000).fadeOut('slow');
 
 					// Clear the form.
@@ -61,16 +64,17 @@ var onContactUsSubmit = function () {
 					if (jqXHR.responseText !== '') {
 						var responseJson = JSON.parse(jqXHR.responseText);
 						if (responseJson.message) {
-							$(formMessages).html(responseJson.message);
+							$(formMessages).html(responseJson.message).fadeIn('slow');
 						} else {
-							$(formMessages).html(jqXHR.responseText);
+							$(formMessages).html(jqXHR.responseText).fadeIn('slow');
 						}
 					} else {
-						$(formMessages).html("- Error. Message not sent").fadeIn('slow')
+						$(formMessages).html("Error. Message not sent.").fadeIn('slow');
 					}
-					$(formMessages).delay(5000).fadeOut('slow');
 				}
 			});
 		}
+
+		grecaptcha.reset();
 	});
 };
