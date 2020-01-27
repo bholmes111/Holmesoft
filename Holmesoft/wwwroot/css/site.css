@@ -149,6 +149,14 @@ body {
         text-decoration: none;
     }
 
+.progress {
+    height: 23px;
+}
+
+.progress-bar {
+    height: 23px;
+}
+
 .card-content {
     max-width: 900px;
 }
