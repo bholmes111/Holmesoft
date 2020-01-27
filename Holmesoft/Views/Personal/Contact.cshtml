@@ -19,28 +19,36 @@
         <div class="col-12">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <form id="contact-form" action="https://nwp70p9mfe.execute-api.us-east-1.amazonaws.com/prod/contact-me" method="POST">
-                <div class="row my-1">
-                    <div class="col">
-                        <input type="text" asp-for="Name" id="name" name="name" placeholder="Name" class="form-control" />
-                        <span asp-validation-for="Name" class="text-danger"></span>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" asp-for="Name" id="name" name="name" placeholder="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="row my-1">
-                    <div class="col">
-                        <input type="text" asp-for="Email" id="email" name="email" placeholder="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" asp-for="Email" id="email" name="email" placeholder="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="row my-1">
-                    <div class="col">
-                        <textarea asp-for="Message" id="message" name="email" placeholder="Message" class="form-control"></textarea>
-                        <span asp-validation-for="Message" class="text-danger"></span>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <textarea rows="5" asp-for="Message" id="message" name="email" placeholder="Message" class="form-control"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="row my-1" style="height:55px;">
+                <div class="row">
                     <div class="col text-center">
-                        <button id="contactSubmit" name="submit" type="submit" class="btn btn-primary g-recaptcha" 
-                                data-sitekey="6LfC89IUAAAAADeMinaioHpFlccKj0zVGynxgSF3" data-badge="inline" data-callback="onContactUsSubmit">Send</button>
+                        <button id="contactSubmit" name="submit" type="submit" class="btn btn-primary g-recaptcha"
+                                data-sitekey="6LfC89IUAAAAADeMinaioHpFlccKj0zVGynxgSF3" data-badge="inline" data-callback="onContactUsSubmit">
+                            Send
+                        </button>
                     </div>
                 </div>
             </form>
