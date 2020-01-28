@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./HolmesoftApp/out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "HolmesoftApp/src/main.ts",
+    "HolmesoftApp/src/polyfills.ts"
+  ],
+  "include": [
+    "HolmesoftApp/src/**/*.ts"
+  ],
+  "exclude": [
+    "HolmesoftApp/src/test.ts",
+    "HolmesoftApp/src/**/*.spec.ts"
+  ]
+}
